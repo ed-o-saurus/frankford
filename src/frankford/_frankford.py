@@ -550,7 +550,7 @@ class Fitter:
         Setup an array of fits.
 
         :param parameters: Parameters to be passed to models
-        :type parameters: dict of str to (:py:class:`frankford.FreeParameter | :py:class:`frankford.FixedParameter` | :py:class:`frankford.TiedParameter`)
+        :type parameters: dict of str to (:py:class:`frankford.FreeParameter` | :py:class:`frankford.FixedParameter` | :py:class:`frankford.TiedParameter`)
         :param models: functions to fit to datasets
         :type models: dict of Any to callable
         """
