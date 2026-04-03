@@ -1,0 +1,53 @@
+# Copyright (C) 2026 Edward F. Behn, Jr.
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "frankford"
+version = "0.2"
+authors = [
+  { name="Ed Behn", email="ed@behn.us" },
+]
+description = "Use the CUDA system to fit multiple datasets simultaneously using the Levenberg-Marquardt algorithm"
+readme = "README_pypi.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: GPU :: NVIDIA CUDA :: 13",
+    "Intended Audience :: Science/Research",
+]
+dependencies = [
+  "cffi >= 2.0.0",
+  "numba-cuda >= 0.23.0",
+  "numpy >= 2.3.5"
+]
+
+[project.urls]
+Homepage = "https://github.com/ed-o-saurus/frankford"
+Issues = "https://github.com/ed-o-saurus/frankford/issues"
+Documentation = "https://frankford.readthedocs.io/"
+
+[tool.hatch.build]
+ignore-vcs = true
+include = [
+    "frankford/*.py",
+    "frankford/*.cu",
+]
