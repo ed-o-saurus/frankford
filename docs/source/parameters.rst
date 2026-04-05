@@ -60,6 +60,4 @@ A tied parameter has a value that is a function of other parameters. It is repre
 
 The functions must take only arguments with the same name as other parameters. The function must return a ``double`` when all arguments are type ``double``. Further, it must conform to the requirements laid out in the `numba documentation <https://nvidia.github.io/numba-cuda/user/cudapysupported.html>`_ for cuda device functions.
 
-If the function raises a python error, the result for the fit is :py:class:`frankford.Result.ERR_USER_FUNC`. Returning a non-finite (:math:`\pm \infty` or not-a-number (NaN)) value has the same result.
-
 While the function can take one or more other tied parameters as arguments, there may not be a circular dependency. For example, if ``a`` is a tied parameter with an argument of ``b``, ``b`` is a tied parameter with an argument of ``c``, and ``c`` is a tied parameter with an argument of ``a``, an error will be raised.
