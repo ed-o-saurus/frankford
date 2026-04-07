@@ -27,7 +27,7 @@ sys.path.insert(0, os.path.abspath("../.."))
 project = "frankford"
 copyright = "2026, Ed Behn"
 author = "Ed Behn"
-release = "0.2"
+release = "0.3"
 
 # -- General configuration
 

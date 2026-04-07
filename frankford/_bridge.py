@@ -232,12 +232,7 @@ def call_tied_param_func(ptx_bridge, param_info, param_infos):
     print("    ld.f64 %fd_out_val, [%rd_out_addr];", file=ptx_bridge)
 
     print(
-        "    testp.finite.f64 %p_no_func_error, %fd_out_val;",
-        file=ptx_bridge,
-    )
-
-    print(
-        "    setp.eq.and.s32 %p_no_func_error, %r_error_status, 0, %p_no_func_error;",
+        "    setp.eq.s32 %p_no_func_error, %r_error_status, 0;",
         file=ptx_bridge,
     )  # The numba ABI returns non-zero value if an error is raised
 

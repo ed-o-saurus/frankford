@@ -19,7 +19,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "frankford"
-version = "0.2"
+version = "0.3"
 authors = [
   { name="Ed Behn", email="ed@behn.us" },
 ]
