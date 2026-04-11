@@ -17,7 +17,7 @@
 
 all: wheel
 
-wheel: frankford/__init__.py frankford/_bridge.py frankford/_common.py frankford/_dataset.py frankford/_dtypes.py frankford/_fitter.py frankford/_kernel.py frankford/_parameters.py LICENSE pyproject.toml
+wheel: frankford/__init__.py frankford/_bridge.py frankford/_common.py frankford/_dataset.py frankford/_dtypes.py frankford/_fitter.py frankford/_kernel.py frankford/_parameters.py frankford/fit.cu LICENSE pyproject.toml
 	python3 -m build
 
 clean:
